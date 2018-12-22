@@ -5,19 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Auth;
-
 use App\likes;
-
 use App\Comment;
-
 use App\Image;
-
 use App\User;
-
 use App\views;
-
-
-
 use DB;
 
 class CountController extends Controller

@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <!-- ==============================================
-            Title and Meta Tags
-            =============================================== -->
+        Title and Meta Tags
+        =============================================== -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,8 @@
         <meta property="og:description" content="" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- ==============================================
-            Favicons
-            =============================================== -->
+        Favicons
+        =============================================== -->
         <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
         <link rel="icon" href="img/logo.jpg">
         <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
@@ -25,24 +25,21 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- ==============================================
-            CSS
-            =============================================== -->
+        CSS
+        =============================================== -->
         <link type="text/css" href="css/demos/photo.css" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
         <!-- ==============================================
-            Feauture Detection
-            =============================================== -->
+        Feauture Detection
+        =============================================== -->
         <script src="js/jquery.min.js"></script>
         <script src="js/autocomplete.js"></script>
         <script src="js/modernizr-custom.js"></script>
     </head>
-
-
-
     <body>
         <!-- ==============================================
-            Navigation Section
-            =============================================== -->
+        Navigation Section
+        =============================================== -->
         <header class="tr-header">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
@@ -76,7 +73,7 @@
                             </li>
                             <li class="">
                                 <a class="text-uppercase text-expanded" href="/homenew">Home
-                                <span class="sr-only">(current)</span>
+                                    <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="active">
@@ -85,24 +82,24 @@
                             <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="notification" role="button"
                                     aria-haspopup="false" aria-expanded="false">
-                                @if(count($notifications) || count($comment_notification))
-                                <i class="fa fa-bell noti-icon"></i>
-                                <span class="badge badge-danger badge-pill noti-icon-badge">
-                                {{count($notifications) + count($comment_notification)}}
-                                </span>
-                                @else
-                                <i class="fa fa-bell noti-icon"></i>
-                                @endif
+                                    @if(count($notifications) || count($comment_notification))
+                                    <i class="fa fa-bell noti-icon"></i>
+                                    <span class="badge badge-danger badge-pill noti-icon-badge">
+                                        {{count($notifications) + count($comment_notification)}}
+                                    </span>
+                                    @else
+                                    <i class="fa fa-bell noti-icon"></i>
+                                    @endif
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-lg">
                                     <div class="dropdown-item noti-title">
                                         <h6 class="m-0">
-                                            <span class="pull-right">
+                                        <span class="pull-right">
                                             <a href="/readall" class="text-dark">
-                                            <small>Clear All</small>
+                                                <small>Clear All</small>
                                             </a>
-                                            </span>
-                                            <span style="color: #000;">Notifications({{count($notifications) + count($comment_notification)}})</span>
+                                        </span>
+                                        <span style="color: #000;">Notifications({{count($notifications) + count($comment_notification)}})</span>
                                         </h6>
                                     </div>
                                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 416.983px;">
@@ -114,18 +111,18 @@
                                                 $url = App\Image::where('id', $notification['pic_id'])->value('url');
                                                 @endphp
                                                 <button class="dropdown-item notify-item comment_notification" id="{{$notification['pic_id']}}" value="{{$url}}">
-                                                    @php
-                                                    $commentedBy = App\User::where('id', $notification['user_id'])->pluck('name');
-                                                    $pic = App\User::where('id', $notification['user_id'])->pluck('pro_pic');
-                                                    @endphp
-                                                    <div class="notify-icon">
-                                                        <img src="../{{$pic[0]}}" class="img-responsive img-circle">
-                                                    </div>
-                                                    <p class="notify-details" style="font-family: Verdana">
-                                                        <strong>{{$commentedBy[0]}}</strong> commented on your post: <br>
-                                                        <span>&nbsp"{{$notification['comments']}}"</span>
-                                                        <small class="text-muted">{{$notification['created_at']}}</small>
-                                                    </p>
+                                                @php
+                                                $commentedBy = App\User::where('id', $notification['user_id'])->pluck('name');
+                                                $pic = App\User::where('id', $notification['user_id'])->pluck('pro_pic');
+                                                @endphp
+                                                <div class="notify-icon">
+                                                    <img src="../{{$pic[0]}}" class="img-responsive img-circle">
+                                                </div>
+                                                <p class="notify-details" style="font-family: Verdana">
+                                                    <strong>{{$commentedBy[0]}}</strong> commented on your post: <br>
+                                                    <span>&nbsp"{{$notification['comments']}}"</span>
+                                                    <small class="text-muted">{{$notification['created_at']}}</small>
+                                                </p>
                                                 </button>
                                                 <!--/ dropdown-item-->
                                                 @endforeach
@@ -167,14 +164,14 @@
                             </li>
                             <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <i class="fa fa-cog"></i>
+                                    <i class="fa fa-cog"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-lg" style="width: 100px; height:100.983px; left:-160px;">
                                     <div class="dropdown-item noti-title">
                                         <h6 class="m-0">
-                                            <span class="pull-right">
+                                        <span class="pull-right">
                                             <a href="photo_profile.html" class="text-dark"></a>
-                                            </span>Settings
+                                        </span>Settings
                                         </h6>
                                     </div>
                                     <div >
@@ -193,13 +190,13 @@
                             <li class="dropdown mega-avatar">
                                 <a href="photo_profile.html#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                     <span class="avatar w-32">
-                                    @if(!empty(Auth::user()->pro_pic))
-                                    <img class="img-fluid img-circle" src="{{Auth::user()->pro_pic}}" style="width: 35px; height: 35px;">
-                                    @endif
+                                        @if(!empty(Auth::user()->pro_pic))
+                                        <img class="img-fluid img-circle" src="{{Auth::user()->pro_pic}}" style="width: 35px; height: 35px;">
+                                        @endif
                                     </span>
                                     <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                     <span class="hidden-xs">
-                                    &nbsp{{Auth::user()->name}}
+                                        &nbsp{{Auth::user()->name}}
                                     </span>
                                 </a>
                                 <div class="dropdown-menu w dropdown-menu-scale pull-right">
@@ -225,129 +222,272 @@
         </header>
         <!-- Page Header -->
         <!-- ==============================================
-            Navbar Second Section
-            =============================================== -->
+        Navbar Second Section
+        =============================================== -->
         <section class="nav-sec">
             <div class="d-flex justify-content-between">
                 <div class="p-2 nav-icon-lg mint-green">
                     <a class="nav-icon" href="photo_home.html"><em class="fa fa-home"></em>
-                    <span>Home</span>
+                        <span>Home</span>
                     </a>
                 </div>
                 <div class="p-2 nav-icon-lg clean-black">
                     <a class="nav-icon" href="photo_explore.html"><em class="fa fa-crosshairs"></em>
-                    <span>Explore</span>
+                        <span>Explore</span>
                     </a>
                 </div>
                 <div class="p-2 nav-icon-lg dark-black">
                     <a class="nav-icon" href="photo_upload.html"><em class="fab fa-instagram"></em>
-                    <span>Upload</span>
+                        <span>Upload</span>
                     </a>
                 </div>
                 <div class="p-2 nav-icon-lg clean-black">
                     <a class="nav-icon" href="photo_stories.html"><em class="fa fa-align-left"></em>
-                    <span>Stories</span>
+                        <span>Stories</span>
                     </a>
                 </div>
                 <div class="p-2 nav-icon-lg dark-black">
                     <a class="nav-icon" href="photo_profile.html"><em class="fa fa-user"></em>
-                    <span>Profile</span>
+                        <span>Profile</span>
                     </a>
                 </div>
             </div>
         </section>
-
+        @if(!empty($polls))
         <section class="notifications">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <ul>
                             <li>
-                                <div class="media first_child"> 
+                                <div class="media first_child">
                                     <img src="img/ques.png" alt="" class="img-responsive img-circle">
-                                    <div class="media_body">
-                                        <p><b>Sample Question 1</b></p>
-                                        <div class="search-area">
-                                            <div class="input-field">
-                                                <input placeholder="Sample Ans" type="text" name="search" required="required" id="search">
+                                    <form action="/polls/1" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 1</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q1" required="required" id="q1" value="{{$polls['q1']}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="btn_group"> 
-                                            <a class="kafe-btn kafe-btn-mint"><i class="material-icons"> done </i></a>
-                                        </div>                                                                         
-                                    </div>
+                                    </form>
                                 </div>
                             </li>
                             <li>
-                                <div class="media first_child"> 
+                                <div class="media first_child">
                                     <img src="img/ques.png" alt="" class="img-responsive img-circle">
-                                    <div class="media_body">
-                                        <p><b>Sample Question 2</b></p>
-                                        <div class="search-area">
-                                            <div class="input-field">
-                                            <input placeholder="Sample Ans" type="text">
+                                    <form action="/polls/2" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 2</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q2" required="required" id="q2" value="{{$polls['q2']}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="btn_group"> 
-                                            <a class="kafe-btn kafe-btn-mint"><i class="material-icons"> done </i></a>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </li>
                             <li>
-                                <div class="media first_child"> 
+                                <div class="media first_child">
                                     <img src="img/ques.png" alt="" class="img-responsive img-circle">
-                                    <div class="media_body">
-                                        <p><b>Sample Question 3</b></p>
-                                        <div class="search-area">
-                                            <div class="input-field">
-                                            <input placeholder="Sample Ans" type="text">
+                                    <form action="/polls/3" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 3</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q3" required="required" id="q3" value="{{$polls['q3']}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="btn_group"> 
-                                            <a class="kafe-btn kafe-btn-mint"><i class="material-icons"> done </i></a>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </li>
                             <li>
-                                <div class="media first_child"> 
+                                <div class="media first_child">
                                     <img src="img/ques.png" alt="" class="img-responsive img-circle">
-                                    <div class="media_body">
-                                        <p><b>Sample Question 4</b></p>
-                                        <div class="search-area">
-                                            <div class="input-field">
-                                            <input placeholder="Sample Ans" type="text">
+                                    <form action="/polls/4" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 4</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q4" required="required" id="q4" value="{{$polls['q4']}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="btn_group"> 
-                                            <a class="kafe-btn kafe-btn-mint"><i class="material-icons"> done </i></a>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </li>
                             <li>
-                                <div class="media first_child"> 
+                                <div class="media first_child">
                                     <img src="img/ques.png" alt="" class="img-responsive img-circle">
-                                    <div class="media_body">
-                                        <p><b>Sample Question 5</b></p>
-                                        <div class="search-area">
-                                            <div class="input-field">
-                                            <input placeholder="Sample Ans" type="text">
+                                    <form action="/polls/5" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 5</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q5" required="required" id="q5" value="{{$polls['q5']}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="btn_group"> 
-                                            <a class="kafe-btn kafe-btn-mint"><i class="material-icons"> done </i></a>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!--/ row-->    
-            </div>            
+                <!--/ row-->
+            </div>
         </section>
+        @else
+        <section class="notifications">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <ul>
+                            <li>
+                                <div class="media first_child">
+                                    <img src="img/ques.png" alt="" class="img-responsive img-circle">
+                                    <form action="/polls/1" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 1</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q1" required="required" id="q1">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media first_child">
+                                    <img src="img/ques.png" alt="" class="img-responsive img-circle">
+                                    <form action="/polls/2" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 2</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q2" required="required" id="q2">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media first_child">
+                                    <img src="img/ques.png" alt="" class="img-responsive img-circle">
+                                    <form action="/polls/3" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 3</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q3" required="required" id="q3">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media first_child">
+                                    <img src="img/ques.png" alt="" class="img-responsive img-circle">
+                                    <form action="/polls/4" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 4</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q4" required="required" id="q4">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media first_child">
+                                    <img src="img/ques.png" alt="" class="img-responsive img-circle">
+                                    <form action="/polls/5" method="POST">
+                                        {{ csrf_field() }}
+                                        <div class="media_body">
+                                            <p><b>Sample Question 5</b></p>
+                                            <div class="row">
+                                                <div class="search-area">
+                                                    <div class="input-field">
+                                                        <input placeholder="Sample Ans" type="text" name="q5" required="required" id="q5">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-left: 8px;">
+                                                    <button type="submit" class="btn btn-success" style="margin-top: 0px;"><i class="material-icons"> done </i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ row-->
+            </div>
+        </section>
+        @endif
 
 
         <script src="assets/js/jquery.min.js"></script>
@@ -356,12 +496,12 @@
         <script src="assets/plugins/slimscroll/jquery.slimscroll.js"></script>
         <script>
             $('#Slim,#Slim2').slimScroll({
-                    height:"auto",
-                    position: 'right',
-                    railVisible: true,
-                    alwaysVisible: true,
-                    size:"8px",
-                });     
+            height:"auto",
+            position: 'right',
+            railVisible: true,
+            alwaysVisible: true,
+            size:"8px",
+            });
         </script>
         <script>
             var user = <?php echo $user;?>;
@@ -373,6 +513,31 @@
             // console.log('names',names);
             $(document).ready(function() {
             $('#search').autocomplete({
+            source: [names]
+            });
+            });
+            $(document).ready(function() {
+            $('#q1').autocomplete({
+            source: [names]
+            });
+            });
+            $(document).ready(function() {
+            $('#q2').autocomplete({
+            source: [names]
+            });
+            });
+            $(document).ready(function() {
+            $('#q3').autocomplete({
+            source: [names]
+            });
+            });
+            $(document).ready(function() {
+            $('#q4').autocomplete({
+            source: [names]
+            });
+            });
+            $(document).ready(function() {
+            $('#q5').autocomplete({
             source: [names]
             });
             });

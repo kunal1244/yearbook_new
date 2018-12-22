@@ -15,6 +15,12 @@ class CreatePollsTable extends Migration
     {
         Schema::create('polls', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('rollno')->unique();
+            $table->string('q1')->default('');
+            $table->string('q2')->default('');
+            $table->string('q3')->default('');
+            $table->string('q4')->default('');
+            $table->string('q5')->default('');
             $table->timestamps();
         });
     }

@@ -71,3 +71,4 @@ Route::post('invite', 'InviteController@process')->name('process');
 Route::get('accept/{token}', 'InviteController@accept')->name('accept');
 //referenced by navbar2
 Route::get('/trendingnew','CountController@index1');
+Route::get('/polls','PollController@index');

@@ -3,6 +3,12 @@
 <link rel="stylesheet" type="text/css" href="/css/autocomplete.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+	.nav-icon-lg
+	{
+		width: 20% !important;
+	}
+</style>
 <header class="tr-header">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -190,8 +196,8 @@
      </a>
      </div>
      <div class="p-2 nav-icon-lg dark-black">
-     <a class="nav-icon" href="#"><i class="fas fa-map-marked-alt" style="font-size: 30px;padding: 0px 0px 10px 0px;"></i>
-    <span>Class Map</span>
+     <a class="nav-icon" href="/trending"><i class="fab fa-gripfire" style="font-size: 35px;padding: 0px 0px 10px 0px;"></i>
+    <span>Trending</span>
      </a>
      </div>
     </div>

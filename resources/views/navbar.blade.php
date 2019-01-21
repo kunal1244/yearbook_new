@@ -1,6 +1,8 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/autocomplete.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/autocomplete.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <header class="tr-header">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -36,7 +38,7 @@
 						</a>
 					</li>
 
-					<li class="active">
+					<li>
 						<a class="text-uppercase text-expanded" href="/trending"  data-step="5" data-intro="<center> See the most popular photos of Kgpians </center> ">Trending</a>
 					</li>
 					<li class="dropdown notification-list">
@@ -168,18 +170,17 @@
 <!-- Page Header --> 
 <section class="nav-sec">
     <div class="d-flex justify-content-between">
-     <div class="p-2 nav-icon-lg mint-green">
-     <a class="nav-icon" href="/polls"><em class="fa fa-home"></em>
-    <span>Polls</span>
+     <div class="p-2 nav-icon-lg" style="background-color: #4e514e;">
+     <a class="nav-icon" href="/polls"><i class="fas fa-chart-bar" style="font-size: 30px;padding: 0px 0px 10px 0px;"></i><span>Polls</span>
      </a>
      </div>
      <div class="p-2 nav-icon-lg clean-black">
-     <a class="nav-icon test" href="#" data-toggle="modal" data-target="#modal_test"><em class="fa fa-crosshairs"></em>
+     <a class="nav-icon test" href="#" data-toggle="modal" data-target="#modal_test"><i class="fas fa-marker" style="font-size: 30px;padding: 0px 0px 10px 0px;"></i>
     <span>Testimonials</span>
      </a>
      </div>
      <div class="p-2 nav-icon-lg dark-black">
-     <a class="nav-icon" href="/bucket"><em class="fab fa-instagram"></em>
+     <a class="nav-icon" href="/bucket"><i class="fa fa-bitbucket" style="font-size: 30px;padding: 0px 0px 10px 0px;"></i>
     <span>Fill Bucket</span>
      </a>
      </div>
@@ -189,7 +190,7 @@
      </a>
      </div>
      <div class="p-2 nav-icon-lg dark-black">
-     <a class="nav-icon" href="#"><em class="fa fa-user"></em>
+     <a class="nav-icon" href="#"><i class="fas fa-map-marked-alt" style="font-size: 30px;padding: 0px 0px 10px 0px;"></i>
     <span>Class Map</span>
      </a>
      </div>
